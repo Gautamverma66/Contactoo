@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <title> Home Page</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <script type="text/javascript" src="script.js"></script>
+
+
+        <!-- header and logo -->
+          <!-- header and logo -->
+          <div class="topnav">
+            <img class="logo" src="images/contactoo.png">
+            <a class="active" href="#">Logout</a> 
+            <input class=" searchButton" placeholder="Search . .  ." type="text" name="search"  pattern="[0-9]{10}" required>
+        <div class="divider"></div>
+        </div>
+
+        <!-- {/* nav bar and content */} -->
+
+        <!-- {/* sidebar */} -->
+
+        <div class="sidebar cross1" >
+            <span onclick="closeNav()" class="crossBtn">&times;</span>
+            <a class="sidebar-items" href="index.html"><i class="fa-solid fa-house"></i>Home</a>
+            <a class="sidebar-items" href="profile.html"><i class="fa-solid fa-user"></i>Your Profile</a>
+            <a class="sidebar-items" href="addContact.html"><i class="fa-solid fa-user-pen"></i>Add Contact</a>
+            <a class="sidebar-items" href="updateContact.html"><i class="fa-solid fa-pen"></i>Update Contact</a>
+            <a class="sidebar-items" href="deleteContact.html"><i class="fa-sharp fa-solid fa-trash"></i>Delete Contact</a>
+            <a class="sidebar-items" href="About.html"><i class="fa-solid fa-circle-info"></i>About Us</a> 
+        </div>
+
+        <!-- {/* content */} -->
+        <div class="content">
+        <span onclick="openNav()" class="hambergurgers"><i class="fa fa-bars" aria-hidden="true"></i></span>
+        </div>
+        <div class="signup-form-container">
+            <h2 class="heading">Signup</h2>
+            <form action="login.html">
+                <div class="signup-element-container">
+                    <div class="form-group">
+                        <label class="label" for="firstName">First Name</label>
+                        <input type="text" class="form-input" name="firstName" id="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="label" for="lastName">Last Name</label>
+                        <input type="text" class="form-input" name="lastName" id="lastName" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="label" for="email">Email</label>
+                        <input type="text" class="form-input" name="email" id="email" required 
+                               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+                               title="xxxx@yyyy.zzz format">
+                    </div>
+                    <div class="form-group">
+                        <label class="label" for="mobileNumber">Mobile Number</label>
+                        <input type="text" class="form-input" name="mobileNumber" id="mobileNumber" pattern="[0-9]{10}">
+                    </div>
+                    <div class="form-group">
+                        <label class="label" for="password">Password</label>
+                        <input type="password" class="form-input" name="password" id="password" 
+                               pattern="    (?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                               title="A number, 1 upper case, 1 lower case with 8 or more characters" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="label" for="confirmPassword">Confirm Password</label>
+                        <input type="password" class="form-input" name="confirmPassword" id="confirmPassword" required
+                               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                               title="Password must contain 1 number, 1 upper case, 1 lower case and at least 8 or more characters">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Register" class="btn">
+                </div>
+            </form>
+        </div>
+
+        <!-- footer -->
+        <!-- <footer>
+            <div id="socal">
+                <h2 id="social-icon">Social icon</h2>
+                <ul>
+                    <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                    <li><a href="https://in.pinterest.com/"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                    <li><a href="https://www.snapchat.com/"><i class="fa-brands fa-snapchat"></i></a></li>
+                </ul>
+            </div>
+            <div id="footer-section">
+                <img class="footer-logo" src="images/contactoo.png">
+                <div id="footer-information">
+                    <div>
+                        <h3 class="creater">All right reserves</h3>
+                        <h4 class="creater-item">Gautam</h4>
+                        <h4 class="creater-item">Saloni</h4>
+                        <h4 class="creater-item">Aman Kumar Pandey</h4>
+                        <h4 class="creater-item">Neeraj Mittal</h4>
+                    </div>
+                    <div>
+                        <h3 class="creater">Customer Care</h3>
+                        <h4 class="creater-item">Contact Us</h4>
+                        <h4 class="creater-item">FAQS</h4>
+                        <h4 class="creater-item">Terms of Service</h4>
+                        <h4 class="creater-item">Privacy Policy</h4>
+                    </div>
+                </div>
+            </div>
+            <div id="sub">
+                <h2>Feedback form</h2>
+                <form method="post">
+                    <input class="footer-input" type="email" placeholder="Enter the email" name="email">
+                    <input class="footer-input" type="text" id="feed" placeholder="Type your feedback here" name="feedback">
+                    <input class="Btn" type="submit" formaction="http://localhost:8080/feedback">
+                </form>
+            </div>
+        </footer> -->
+    </body>
+</html>
